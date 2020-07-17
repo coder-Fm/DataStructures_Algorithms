@@ -7,7 +7,7 @@ A hash table generalizes the simpler notion of an ordinary array. Directly addre
 <p><h4>Hash Function</h4></p>
 A function that manipulates the key to produce an array index.
 <p align="center">
-  <img width="460" height="400" src="hashTable.jpg" style="border-radius: 10px;">
+  <img width="460" height="400" src="img/hashTable.JPG" style="border-radius: 10px;">
 </p><br>
 <p><h4>What makes a good hash function?</h4></p>
 A good hash function minimizes collisions, but they’re impossible to completely avoid.

@@ -3,7 +3,7 @@
 "Before there were computers, there were algorithms."
 &nbsp;&nbsp;
 <p align="center">
-  <img width="460" height="300" src="algorithms.jpg" style="border-radius: 10px;">
+  <img width="460" height="300" src="img/algorithms.jpg" style="border-radius: 10px;">
 </p><br>
 Each folder in this repository will be representing one of the most important and most commonly used algorithms.
 <br>
