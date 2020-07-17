@@ -11,6 +11,7 @@ Each folder in this repository will be representing one of the most important an
 <li>Linked Lists</li>
 <li>Stacks and Queues</li>
 <li>Trees and Graphs</li>
+<li>Sorting</li>
 <br><br><br><br><br><br><br><br>
 <b>References</b>
 <br>
