@@ -18,16 +18,15 @@ A good hash function minimizes collisions, but they’re impossible to completel
 //1. Returns an integer between 0 and MAX_ITEMS -1.
 int ItemType::Hash() const
 {
-  return (idNum % MAX_ITEMS);
+  return (id_num % MAX_ITEMS);
 }
 
 //2. Returns the element in the array at position item.Hash().
-void ListType<ItemType>::RetrieveItem(ItemType& item)
+void ListType<ItemType>::GetItem(ItemType& i)
 {
   int location;
-
-  location = item.Hash();
-  item = info[location];
+  location = i.Hash();
+  i = info[location];
 }
 ```
 <br>
