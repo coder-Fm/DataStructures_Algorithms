@@ -49,11 +49,11 @@ Handle collisions by allowing multiple elements to have the same hash value
 <hr style="width: 50%;">
 
 <p><h4>What's a Good Hash Function?</h4></p>
-<ul>Efficiency: Hash tables have O(1) search. This deteriorates if the hash function is inefficient.</ul>
-<ul>Simplicity: Don’t forget hash functions need to be written and maintained. Complex functions may incur a technical cost.</ul>
-<ul>Perfect hash functions are difficult but not impossible, especially for small sets of values.</ul>
+* **Efficiency:** Hash tables have O(1) search. This deteriorates if the hash function is inefficient.
+* **Simplicity:** Don’t forget hash functions need to be written and maintained. Complex functions may incur a technical cost.
+* Perfect hash functions are difficult but not impossible, especially for small sets of values.
 
 <p><h4> How to choose a good hash function</h4></p>
-<ul>A good hash function reduces collisions by uniformly distributing elements</ul>
-<ul>Knowledge about the domain of keys helps</ul>
-<ul>Probing, buckets, and chaining can only do so much when there’s many collisions</ul>
+* A good hash function reduces collisions by uniformly distributing elements.
+* Knowledge about the domain of keys helps.
+* Probing, buckets, and chaining can only do so much when there’s many collisions.
