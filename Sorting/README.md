@@ -9,15 +9,7 @@ A sorting algorithm describes the method by which we determine the sorted order.
 
 -----------------------------
 &nbsp;
-Algorithm | Worst-case running time |  Average-case/expected running time
------------- | ------------- | -------------
-**Insertion sort** | $\Theta (n^2)$ | $\Theta (n^2)$
-**Merge sort** | $\Theta(n log n)$ | $\Theta(n log n)$
-**Heapsort** | $O(n log n)$ | __
-**Quicksort** | $\Theta (n^2)$ | $\Theta(n log n)$ (expected)
-**Counting sort** | $\Theta (k + n)$ | $\Theta (k + n)$
-**Radix sort** | $\Theta (d(n + k))$ | $\Theta (d(n + k))$
-**Bucket sort** | $\Theta (n^2)$ | $\Theta (n)$ (average-case)
+![Sort table](img/STable.JPG)
 
 -----------------------------
 
@@ -25,6 +17,7 @@ Algorithm | Worst-case running time |  Average-case/expected running time
 Insertion sort is an efficient algorithm for sorting a small number of elements. It works the way people sort a hand of playing cards. We start with an empty left hand and the cards face down on the table, then remove one card at a time from the table and insert it into the correct position in the left hand. To find the correct position for a card, we compare it with each of the cards already in the hand, from right to left.
 
 ![Insertion sort](img/IS.JPG)
+
 ```
 INSERTION-SORT(A)
 for j = 2 to A.length
@@ -78,30 +71,13 @@ void HeapSort(ItemType values[], int numValues)
 -----------------------------
 
 ### Quicksort
+
 Randomized Divide and Conqur: Finding the Median and Quicksort
 
-Suppose we are given a st of n numbers S = {$a_{1}$, $a_{2}$, ..., $a_{n}$}. Their median is  the number that would be in the middle position if we were to sort them. The median of S is equal to the $k^{th}$ largest element in S where k = (n + 1)/2 if n is odd, and k = n/2 if n is even.
-Consider the function Select(S, k) that returns the $k^{th}$ largest element in S. The basic structure of the algorithm implementing Select is as follows:
+Suppose we are given a st of n numbers S = {a1, a2, ..., an}. Their median is  the number that would be in the middle position if we were to sort them. The median of S is equal to the kth largest element in S where k = (n + 1)/2 if n is odd, and k = n/2 if n is even.
+Consider the function Select(S, k) that returns the kth largest element in S. The basic structure of the algorithm implementing Select is as follows:
 
-```math
-a^2+b^2=c^2
-```
-
-Select(S, k):
-Choose a splitter $a_{i}$ $\in$ S
-For each element $a_{j}$ of S
-&emsp;Put $a_{j}$ in $S^{-}$ if $a_{j}$ $<$ $a_{i}$
-&emsp;Put $a_{j}$ in $S^{+}$ if $a_{j}$ $>$ $a_{i}$
-Endfor
-If |$S^{-}$|=k-1 then
-&emsp;The splitter $a_{i}$ was in fact the desired answer
-Else if |$S^{-}$| $\geq$ k then
-&emsp;The $k^{th}$ largest element lies in $S^{-}$
-&emsp;Recursively call Select($S^{-}$,k)
-Else suppose |$S^{-}$|= l $<$k-1
-&emsp;The $k^{th}$ largest element lies in $S^{+}$
-&emsp;Recursively call Select($S^{+}$,k-1-l)
-Endif
+![quicksort](img/QSort_.JPG)
 
 Example
 ![quicksort](img/QS.JPG)
