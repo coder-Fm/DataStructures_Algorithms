@@ -85,7 +85,7 @@ Example
 -----------------------------
 
 ### Counting sort
-Counting sort assumes that each of the n input elements is an integer in the range 0 to k, for some integer k. When k = O(n), the sort runs in $\Theta$(n) time.
+Counting sort assumes that each of the n input elements is an integer in the range 0 to k, for some integer k. When k = O(n), the sort runs in O(n) time.
 
 ```
 COUNTING-SORT(A,B,k)
