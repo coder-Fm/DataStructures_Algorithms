@@ -29,19 +29,12 @@ Insertion sort is an efficient algorithm for sorting a small number of elements.
 INSERTION-SORT(A)
 
 for j = 2 to A.length
-
 &emsp;key = A[j]
-
 &emsp;// Insert A[j] into the sorte sequence A[1 .. j-1]
-
 &emsp;i = j - 1
-
 &emsp;while i $>$ 0 and A[i] $>$ key
-
 &emsp;&emsp;A[i + 1] = A[i]
-
 &emsp;&emsp;i = i - 1
-
 &emsp;A[i+1] = key
 
 -----------------------------
