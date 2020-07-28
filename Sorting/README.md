@@ -83,8 +83,12 @@ Randomized Divide and Conqur: Finding the Median and Quicksort
 Suppose we are given a st of n numbers S = {$a_{1}$, $a_{2}$, ..., $a_{n}$}. Their median is  the number that would be in the middle position if we were to sort them. The median of S is equal to the $k^{th}$ largest element in S where k = (n + 1)/2 if n is odd, and k = n/2 if n is even.
 Consider the function Select(S, k) that returns the $k^{th}$ largest element in S. The basic structure of the algorithm implementing Select is as follows:
 
+```math
+a^2+b^2=c^2
+```
+
 Select(S, k):
-Choose a splitter a_{i} \in S
+Choose a splitter $a_{i}$ $\in$ S
 For each element $a_{j}$ of S
 &emsp;Put $a_{j}$ in $S^{-}$ if $a_{j}$ $<$ $a_{i}$
 &emsp;Put $a_{j}$ in $S^{+}$ if $a_{j}$ $>$ $a_{i}$
@@ -107,19 +111,21 @@ Example
 ### Counting sort
 Counting sort assumes that each of the n input elements is an integer in the range 0 to k, for some integer k. When k = O(n), the sort runs in $\Theta$(n) time.
 
+```
 COUNTING-SORT(A,B,k)
 let C[0..k] be a new array
 for i = 0 to k
-&emsp;C[i] = 0
+  C[i] = 0
 for j = 1 to A.length
-&emsp;C[A[j]] = C[A[j]] + 1
+  C[A[j]] = C[A[j]] + 1
 // C[i] now contains the number of elements equal to i.
 for i = 1 to k
-&emsp;C[i] = C[i] + C[i-1]
+  C[i] = C[i] + C[i-1]
 // C[i] now contains the number of elements less than or equal to i.
 for j = A.length downto 1
-&emsp;B[C[A[j]]] = A[j]
-&emsp;C[A[j]] = C[A[j]]-1
+  B[C[A[j]]] = A[j]
+  C[A[j]] = C[A[j]]-1
+```
 
 -----------------------------
 
@@ -127,9 +133,11 @@ for j = A.length downto 1
 Radix sort is the algorithm used by the card-sorting machines. The cards have 80 columns, and in each column a machine can punch a hole in one of 12 places. The sorter can be mechanically programmed to examine a given column of each card in a deck and distribute the card into one of 12 bins.
 Radix sort solves the problem of card sorting, by sorting on the least significant digit first. The algorithm then comines the cards into a single deck, with the cards in the 0 bin preceding the cards in the 1 bin preceding the cards in the 2 in and so on.
 
+```
 RADIX-SORT(A,d)
 for i = 1 to d
-&emsp; use a statle sort to sort array A on digit i
+  use a statle sort to sort array A on digit i
+```
 
 -----------------------------
 
@@ -138,13 +146,17 @@ Bucket sort assumes that the input is drawn from a uniform distribution and has 
 
 ![Bucketsort](img/BS.JPG)
 
+```
 BUCKET-SORT(A)
 let B[0..n-1] be a new array
 n = A.length
 for i = 0 to n-1
-&emsp;make B[i] an empty list
+  make B[i] an empty list
 for i = 1 to n
-&emsp;insert A[i] into list B[[nA[i]]]
+  insert A[i] into list B[[nA[i]]]
 for i = 0 to n-1
-&emsp;sort list B[i] with insertion sort
+  sort list B[i] with insertion sort
 concatenate the lists B[0], B[1], ..., B[n-1] together in order
+```
+
+-----------------------------
