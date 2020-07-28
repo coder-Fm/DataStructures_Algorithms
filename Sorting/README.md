@@ -25,34 +25,33 @@ Algorithm | Worst-case running time |  Average-case/expected running time
 Insertion sort is an efficient algorithm for sorting a small number of elements. It works the way people sort a hand of playing cards. We start with an empty left hand and the cards face down on the table, then remove one card at a time from the table and insert it into the correct position in the left hand. To find the correct position for a card, we compare it with each of the cards already in the hand, from right to left.
 
 ![Insertion sort](img/IS.JPG)
-
+```
 INSERTION-SORT(A)
-
 for j = 2 to A.length
-&emsp;key = A[j] &nbsp;
-&emsp;// Insert A[j] into the sorte sequence A[1 .. j-1]&nbsp;
-&emsp;i = j - 1&nbsp;
-&emsp;while i $>$ 0 and A[i] $>$ key&nbsp;
-&emsp;&emsp;A[i + 1] = A[i]&nbsp;
-&emsp;&emsp;i = i - 1&nbsp;
-&emsp;A[i+1] = key&nbsp;
-
+  key = A[j]
+  // Insert A[j] into the sorte sequence A[1 .. j-1]
+  i = j - 1
+  while i $>$ 0 and A[i] $>$ key
+    A[i + 1] = A[i]
+    i = i - 1
+  A[i+1] = key
+```
 -----------------------------
 
 ### Merge sort
 Given a sequence of n numbers, the following algorithm sorts the sequence in ascending order.
 
+```
 Algorithm MergeSort(S)
-
-if |S| = 1 then&nbsp;
-&emsp;return (S);&nbsp;
-else&nbsp;
-&emsp;Divide S into two sequences S1 and S2 of equal size;&nbsp;
-&emsp;return (merge (MergeSort(S1), MergeSort(S2)));&nbsp;
+if |S| = 1 then
+  return (S);
+else
+  Divide S into two sequences S1 and S2 of equal size;
+  return (merge (MergeSort(S1), MergeSort(S2)));
+```
 
 Example :
 ![mergesort](img/MS.JPG)
-
 -----------------------------
 
 ### Heap sort
@@ -85,7 +84,7 @@ Suppose we are given a st of n numbers S = {$a_{1}$, $a_{2}$, ..., $a_{n}$}. The
 Consider the function Select(S, k) that returns the $k^{th}$ largest element in S. The basic structure of the algorithm implementing Select is as follows:
 
 Select(S, k):
-Choose a splitter $a_{i}$ $\in$ S
+Choose a splitter a_{i} \in S
 For each element $a_{j}$ of S
 &emsp;Put $a_{j}$ in $S^{-}$ if $a_{j}$ $<$ $a_{i}$
 &emsp;Put $a_{j}$ in $S^{+}$ if $a_{j}$ $>$ $a_{i}$
