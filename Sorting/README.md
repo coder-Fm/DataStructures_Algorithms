@@ -72,7 +72,20 @@ void HeapSort(ItemType values[], int numValues)
 
 ### Quicksort
 
-Randomized Divide and Conqur: Finding the Median and Quicksort
+QuickSort algorithm uses recursion to effiently sort a list. It can be used to sort lists stored in arrays or linear linked lsts. It sorts a list by dividing it into two sulists. Between the sublists is a selected value known as the pivot.
+
+pseudocode :
+```
+quickSort:
+If Starting Index < Ending index
+  Partition the List around a pivot
+  quickSort Sublist 1
+  quickSort Sublist 2
+End If
+```
+&nbsp;
+&nbsp;
+**Randomized Divide and Conqur: Finding the Median and Quicksort**
 
 Suppose we are given a st of n numbers S = {a1, a2, ..., an}. Their median is  the number that would be in the middle position if we were to sort them. The median of S is equal to the kth largest element in S where k = (n + 1)/2 if n is odd, and k = n/2 if n is even.
 Consider the function Select(S, k) that returns the kth largest element in S. The basic structure of the algorithm implementing Select is as follows:
