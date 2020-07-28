@@ -29,13 +29,13 @@ Insertion sort is an efficient algorithm for sorting a small number of elements.
 INSERTION-SORT(A)
 
 for j = 2 to A.length
-&emsp;key = A[j]
-&emsp;// Insert A[j] into the sorte sequence A[1 .. j-1]
-&emsp;i = j - 1
-&emsp;while i $>$ 0 and A[i] $>$ key
-&emsp;&emsp;A[i + 1] = A[i]
-&emsp;&emsp;i = i - 1
-&emsp;A[i+1] = key
+&emsp;key = A[j] &nbsp;
+&emsp;// Insert A[j] into the sorte sequence A[1 .. j-1]&nbsp;
+&emsp;i = j - 1&nbsp;
+&emsp;while i $>$ 0 and A[i] $>$ key&nbsp;
+&emsp;&emsp;A[i + 1] = A[i]&nbsp;
+&emsp;&emsp;i = i - 1&nbsp;
+&emsp;A[i+1] = key&nbsp;
 
 -----------------------------
 
@@ -44,11 +44,11 @@ Given a sequence of n numbers, the following algorithm sorts the sequence in asc
 
 Algorithm MergeSort(S)
 
-if |S| = 1 then
-&emsp;return (S);
-else
-&emsp;Divide S into two sequences S1 and S2 of equal size;
-&emsp;return (merge (MergeSort(S1), MergeSort(S2)));
+if |S| = 1 then&nbsp;
+&emsp;return (S);&nbsp;
+else&nbsp;
+&emsp;Divide S into two sequences S1 and S2 of equal size;&nbsp;
+&emsp;return (merge (MergeSort(S1), MergeSort(S2)));&nbsp;
 
 Example :
 ![mergesort](img/MS.JPG)
