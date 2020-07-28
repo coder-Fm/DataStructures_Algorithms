@@ -70,9 +70,9 @@ void HeapSort(ItemType values[], int numValues)
 ```
 -----------------------------
 
-### Quicksort
+### QuickSort
 
-QuickSort algorithm uses recursion to effiently sort a list. It can be used to sort lists stored in arrays or linear linked lsts. It sorts a list by dividing it into two sulists. Between the sublists is a selected value known as the pivot.
+The QuickSort algorithm uses recursion to efficiently sort a list. It can be used to sort lists stored in arrays or linear linked lsts. It sorts a list by dividing it into two sulists. Between the sublists is a selected value known as the pivot.
 
 pseudocode :
 ```
@@ -146,6 +146,89 @@ for i = 1 to n
 for i = 0 to n-1
   sort list B[i] with insertion sort
 concatenate the lists B[0], B[1], ..., B[n-1] together in order
+```
+
+-----------------------------
+
+### Bubble sort
+Bubble sort is a way to arrange data in ascending or descending order.
+
+**pseudocode**
+```
+Do
+  Set swap flag to false
+  For count is set to each subscript in array from 0 through the next-to-last subscript
+    If array[count] is greater than array[count + 1]
+      Swap the contents of array[count] and array[count + 1]
+      Set swap flag to true
+    End If
+  End for
+While any elements have been swapped
+```
+
+![Bubble sort](img/BUBBLEsort.JPG)
+
+```C++
+void BubbleSort(int array[], int size) {
+  bool swap;
+  int temp;
+  do {
+    swap = false;
+    for (int count=0; count < (size-1); count++) {
+      if (array[count] > array[count+1]) {
+        temp = array[count];
+        array[count] = array[count+1];
+        array[count+1] = temp;
+        swap = true;
+      }
+    }
+  } while (swap);
+}
+```
+
+-----------------------------
+
+### Selection sort
+Selection sort performs fewer exchanges by moving items immediately to their final position in the array.
+
+**How selection sort works**: The smallest value in the array is located and moved to element 0. Then the next smallest value is located and moved to element 1. This process continues until all of the elements have been placed in their proper order.
+
+Pseudocode:
+```
+For startScan is set to each subscript in array from 0 through the next-to_last subscript
+  Set index variable to startScan
+  Set minIndex variable to startScan
+  Set minValue variable to array[startScan]
+
+  For index is set to each subscript in array from (startScan + 1) through the last subscript
+    If array[index] is less than minValue
+      Set minValue to array[index]
+      Set minIndex to index
+    End If
+  End for
+  Set array[minIndex] to array[startScan]
+  Set array[startScan] to minValue
+End For
+```
+
+![Selection sort](img/SELECTIONsort.JPG)
+
+```C++
+void selectionSort(int arr[], int size) {
+  int startScan, minIndex, minValue;
+  for (startScan = 0; startScan < (size-1); startScan++) {
+    minIndex = startScan;
+    minValue = arr[startScan];
+    for(int index = startScan + 1; index < size; index++) {
+      if (arr[index] < minValue) {
+        minValue = arr[index];
+        minIndex = index;
+      }
+    }
+    arr[minIndex] = arr[startScan];
+    arr[startScan] = minValue;
+  }
+}
 ```
 
 -----------------------------
