@@ -8,6 +8,7 @@
 Each folder in this repository will be representing one of the most important and most commonly used algorithms.
 <br>
 <li>Hash Tables</li>
+<li>Binary Search</li>
 <li>Linked Lists</li>
 <li>Stacks and Queues</li>
 <li>Trees and Graphs</li>
