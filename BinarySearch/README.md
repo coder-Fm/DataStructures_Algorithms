@@ -35,5 +35,6 @@ int binarySearch(const int array[], int n, int value) {
       first = middle + 1;
     }
   }
+  return position;
 }
 ```
