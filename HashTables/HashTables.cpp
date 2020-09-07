@@ -34,7 +34,7 @@ void ListType<ItemType>::InsertItem(ItemType i)
 template<class ItemType>
 void ListType<ItemType>::GetItem(ItemType& i, bool&
 found)
-{
+{ 
   int location;
   int start_location;
   bool moreToSearch = true;
